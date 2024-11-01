@@ -36,9 +36,9 @@ int main(int argc, char **argv, char **env)
     for (simcyc = 0; simcyc < MAX_SIM_CYC; simcyc++)
     {
         // dump variables into VCD file and toggle clock
-        for (tick = 0; tick < 2; tick++)
+        for (tick = 0; tick < 8880; tick++)
         {
-            tfp->dump(2 * simcyc + tick);
+            tfp->dump(8880 * simcyc + tick);
             top->clk = !top->clk;
             top->eval();
         }

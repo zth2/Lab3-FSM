@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#open file for vbuddy
+~/Documents/iacLAB-0/lab0-devtools/tools/attach_usb.sh
+
+# cleanup
+rm -rf obj_dir
+rm -f sinegen.vcd
+
 # Translate Verilog -> C++ including testbench
 verilator   -Wall --trace \
             -cc f1_fsm.sv \
